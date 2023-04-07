@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "aws-automatisation"
+version = "0.1.0"
+description = ""
+authors = ["d0wnpour <ratialania01@gmail.com>"]
+readme = "README.md"
+packages = [{include = "aws_automatisation"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+boto3 = "^1.26.108"
+python-dotenv = "^1.0.0"
+python-magic-bin = "^0.4.14"
+python-magic = "^0.4.27"
+libmagic = "^1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
