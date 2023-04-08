@@ -2,7 +2,7 @@
 
 
 
-![Python](https://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png)
+
 
 Tool was created for educational purposes. It will be updated time by time and new servises will be added.
 
