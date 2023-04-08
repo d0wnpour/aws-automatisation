@@ -2,9 +2,9 @@
 
 
 
-<p align="center">
-  <img src="https://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png" alt="Python">
-</p>
+<center>
+![Python](https://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png)
+</center>
 
 Tool was created for educational purposes. It will be updated time by time and new servises will be added.
 
@@ -12,16 +12,16 @@ Tool was created for educational purposes. It will be updated time by time and n
 - Python 3
 - Poetry
 
-| Download Python 3 From:
+| Download Python 3 From: <br>
 <a href="http://python.org/">``` http://www.python.org/ ```</a>
 
-| install poetry
+| install poetry <br>
 ```curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -```
 
-Or via PIP
+Or via PIP <br>
 ``` pip install poetry ```
 
-to install project dependencies on local machine use command:
+to install project dependencies on local machine use command: <br>
 ```poetry install ```
 
 <p align=center>Used Methodes:</p>
@@ -53,6 +53,6 @@ to install project dependencies on local machine use command:
 
 
 
-> Business And Technology University 
-> Author: <b>Rati Alania</b>
+> Business And Technology University <br> 
+> Author: <b>Rati Alania</b> <br>
 > Lecturer: <b>Guja Nemsadze</b>
