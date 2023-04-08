@@ -1,4 +1,4 @@
-"""
+
 import logging
 
 import magic
@@ -31,4 +31,3 @@ def download_file_and_upload_to_s3(aws_s3_client, bucket_name, url, file_name, k
             file.write(content)
  
     return f"https://{aws_s3_client.meta.region_name}.amazonaws.com/{bucket_name}/{file_name}"###
-"""

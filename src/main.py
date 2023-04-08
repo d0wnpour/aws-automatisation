@@ -10,7 +10,7 @@ from Bucket.Policy.multiple_policy import multiple_policy
 from Bucket.Policy.asign_policy import assign_policy
 from Bucket.Policy.public_read_policy import public_read_policy
 from Bucket.Policy.read_bucket_policy import read_bucket_policy
-#from Object.download_file_and_upload_to_s3 import download_file_and_upload_to_s3
+from Object.download_file_and_upload_to_s3 import download_file_and_upload_to_s3
 from Object.set_object_access_policy import set_object_access_policy
 from Object.multipart_upload import multipart_upload
 from Object.upload_file import upload_file
@@ -46,7 +46,7 @@ parser.add_argument(
 parser.add_argument(
    "-be",
    "--bucket_exist",
-   help="Returns Boolean depending on Bucket existence"
+   help="Checks Bucket existence"
 )
 
 parser.add_argument(
@@ -103,7 +103,7 @@ parser.add_argument(
         "--upload_file_obj",
         nargs=3,
         metavar=("BUCKET_NAME", "FILE_NAME", "FILE_OBJ"),
-        help="Upload a file object to S3 bucket with specific object name"
+        help="Upload a file  to S3 bucket with specific object name"
     )
 parser.add_argument(
         "-ufp",
@@ -164,9 +164,9 @@ def main():
         else:
             print(f"Bucket '{bucket_name}' does not exist.")
 
-    #if args.download_and_upload:
-        #bucket_name, url, file_name = args.download_and_upload
-        #download_file_and_upload_to_s3(s3_client, bucket_name, url, file_name, keep_local=False)
+    if args.download_and_upload:
+        bucket_name, url, file_name = args.download_and_upload
+        download_file_and_upload_to_s3(s3_client, bucket_name, url, file_name, keep_local=False)
 
     if args.read_bucket_policy:
         bucket_name = args.read_bucket_policy
