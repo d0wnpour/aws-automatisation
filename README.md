@@ -2,7 +2,7 @@
 
 
 
-![Python](https://w7.pngwing.com/pngs/234/329/png-transparent-python-logo-thumbnail.png)
+![Python](https://ibb.co/FXLPP90)
 
 Tool was created for educational purposes. It will be updated time by time and new servises will be added.
 
