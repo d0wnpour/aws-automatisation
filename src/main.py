@@ -18,6 +18,7 @@ from Object.upload_file_obj import upload_file_obj
 from Object.upload_file_put import upload_file_put
 from Object.add_lifecycle_policy import add_lifecycle_policy
 from Object.delete_object import delete_object
+from Bucket.deploy_to_s3 import deploy_to_s3
 
 parser = argparse.ArgumentParser(
    description="CLI S3 Bucket Helper"
@@ -30,6 +31,8 @@ parser.add_argument(
   action="store_true",
   help="Users Bucket list",
 )
+
+
 
 parser.add_argument(
    "-cb",
@@ -130,6 +133,21 @@ parser.add_argument(
     help="Delete an object from S3 bucket"    
 )
 
+parser.add_argument(
+    'action',
+    choices=['host'], 
+    help='Action to perform'
+)
+parser.add_argument(
+    'host',
+    help='S3 bucket name to host the website'
+)
+parser.add_argument(
+    '--source', 
+    required=True, 
+    help='Local path to the website files'
+)
+
 def main():
     s3_client = init_client()
     args = parser.parse_args()
@@ -227,6 +245,16 @@ def main():
 
     if args.delete_object is not None:
         delete_object(args.delete_object[0], args.delete_object[1])
+
+    if args.action == 'host':
+        try:
+            bucket_name = args.host
+            source_path = args.source
+            url = deploy_to_s3(s3_client, bucket_name, source_path)
+            print(f"Website hosted at: {url}")
+        except Exception as e:
+            print("Error deploying to S3:")
+            print(e)
     
 
     

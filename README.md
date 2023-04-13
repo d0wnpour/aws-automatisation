@@ -41,6 +41,7 @@ to install project dependencies on local machine use command: <br>
 | Object | upload_file_put | Uploades file with put method | ```-ufp or --upload_file_put``` |
 | Object | add_lifecycle_policy | Deletes object after specified amount of time | ```-alp or --add_lifecycle_policy``` |
 | Object | delete_object | Deletes given object from Bucket | ```-del or --delete_object``` |
+| Bucket  | deploy_to_s3  | Deploing folders and files to s3 static hosting  | ``` host and --source```|
 
 ## Used Tools:
 - ```boto 3```
